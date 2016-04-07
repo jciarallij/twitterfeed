@@ -1,0 +1,208 @@
+/* line 2, ../compass/sass/style.scss */
+html {
+  line-height: 1.5;
+  font-family: "Roboto",sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 9, ../compass/sass/style.scss */
+body {
+  background-color: #eee;
+}
+
+/* line 13, ../compass/sass/style.scss */
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* line 18, ../compass/sass/style.scss */
+#content-wrapper {
+  height: 100%;
+}
+
+/* line 24, ../compass/sass/style.scss */
+#feed-content {
+  height: 500px;
+  background-color: white;
+  font-size: 18px;
+  border-top: 0px;
+  padding: 0px;
+}
+
+/* line 33, ../compass/sass/style.scss */
+#feed-content img {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 150px;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 42, ../compass/sass/style.scss */
+#header {
+  height: 25vh;
+  /*	background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
+  	background-position: 1px -126px;*/
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* line 51, ../compass/sass/style.scss */
+#image-header {
+  height: 25vh;
+  background-position: 1px -126px;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
+  border-bottom: 5px solid black;
+}
+
+/* line 65, ../compass/sass/style.scss */
+.navbar-inverse {
+  background-color: #06156a;
+  width: 19.2%;
+}
+
+/* line 71, ../compass/sass/style.scss */
+.navbar {
+  float: right;
+  border-radius: 0 0 0 50px;
+  border-bottom: 3px solid #ddd;
+}
+
+/* line 78, ../compass/sass/style.scss */
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 81%;
+  z-index: 1030;
+}
+
+/* line 85, ../compass/sass/style.scss */
+.time-stamp {
+  position: relative;
+  bottom: -270px;
+  right: 10px;
+  float: right;
+}
+
+/* line 96, ../compass/sass/style.scss */
+#feed-content .profile-image img {
+  position: relative;
+  top: -40px;
+  left: 15px;
+  width: 73px;
+  float: left;
+  height: 73px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* line 109, ../compass/sass/style.scss */
+#user-name {
+  position: relative;
+  top: 92px;
+  left: 15px;
+}
+
+/* line 115, ../compass/sass/style.scss */
+#tweet-content {
+  /*border: 2px dotted black;*/
+  height: 300px;
+  position: relative;
+  left: 110px;
+  /*top: -55px;*/
+}
+
+/* line 123, ../compass/sass/style.scss */
+.at-username {
+  font-size: 14px;
+  position: relative;
+  top: -10px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 130, ../compass/sass/style.scss */
+  body {
+    background-color: lightgreen;
+  }
+
+  /* line 135, ../compass/sass/style.scss */
+  #tweet-content {
+    padding-left: 0;
+  }
+
+  /* line 143, ../compass/sass/style.scss */
+  nav {
+    display: none;
+  }
+
+  /* line 148, ../compass/sass/style.scss */
+  #feed-content .profile-image img {
+    display: none;
+  }
+
+  /* line 153, ../compass/sass/style.scss */
+  #user-name {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+
+  /* line 160, ../compass/sass/style.scss */
+  .at-username {
+    font-size: 12px;
+    position: relative;
+    top: -5px;
+  }
+
+  /* line 165, ../compass/sass/style.scss */
+  .time-stamp {
+    bottom: -270px;
+    font-size: 14px;
+  }
+
+  /* line 169, ../compass/sass/style.scss */
+  #feed-content
+  img {
+    top: -6px;
+    left: -4px;
+    width: 103%;
+  }
+
+  /* line 175, ../compass/sass/style.scss */
+  .panel {
+    margin-bottom: 20px;
+  }
+}
+/* line 182, ../compass/sass/style.scss */
+.my-nav {
+  position: relative;
+  right: -26px;
+}
+
+/* line 187, ../compass/sass/style.scss */
+.link1 {
+  background-color: #FFFFFF;
+  border-radius: 0 0 0 15px;
+  border: 1px solid #eee;
+}
+
+/* line 193, ../compass/sass/style.scss */
+li:hover {
+  background-color: #ddd;
+  height: 52px;
+}
+
+/* line 198, ../compass/sass/style.scss */
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: black;
+}
