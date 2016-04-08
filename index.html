@@ -22,13 +22,22 @@
 	<div id="full-wrapper" class="container-fluid">
 		<div id="header" class="container-fluid text-center">
 			<div id="image-header"><a href="http://www.lolesports.com/en_US/na-lcs/"></a></div>
-	
+			
+
+
+
+			<div class="col-md-6 col-sm-8 col-xs-10 banner">
+				{{header}}
+			</div>			
+			
+		
 <!--****[Header]****-->
 <div class="container-fluid">
 <!--****[Navigation]****-->
 		<div class="navbar navbar-default" role=navigation>
 			<div class="navbar-header">
-			
+
+
 				
 	<!-- 			My Toggle Button for my Navigation Menu! -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,13 +50,47 @@
 			
 	<!-- 				My Navigation bar -->
 				<div class="navbar-collapse collapse">
-					<span class="navbar-brand">LoL Esport Tweets</span>
+					<span class="navbar-brand"> Live LoL Esport Tweets</span>
 					<ul class="nav navbar-nav">
-						<li><a href="#">NALCS</a></li>
-						<li><a href="#">EULCS</a></li>
-						<li><a href="#">LCK</a></li>
-						<li><a href="#">LPL</a></li>
-						<li><a href="#">LMS</a></li>
+						<li><a ng-click="changeHeader('NALCS')" href="#/NALCS">NALCS</a></li>
+						<li><a ng-click="changeHeader('EULCS')" href="#/EULCS">EULCS</a></li>
+						<li><a ng-click="changeHeader('LCK')" href="#/LCK">LCK</a></li>
+						<li><a ng-click="changeHeader('LPL')" href="#/LPL">LPL</a></li>
+						<li><a ng-click="changeHeader('LMS')" href="#/LMS">LMS</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container-fluid">
+<!--****[Navigation]****-->
+		<div class="bottom-nav-fans navbar navbar-default" role=navigation>
+			<div class="navbar-header">
+
+
+				
+	<!-- 			My Toggle Button for my Navigation Menu! -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			
+	<!-- 				My Navigation bar -->
+				<div class="navbar-collapse collapse">
+					<span class="navbar-brand">Fan Tweets!</span>
+					<ul class="nav navbar-nav">
+						<li><a ng-click="changeHeader('NALCS')" href="#/NALCS">#NALCS</a></li>
+						<li><a ng-click="changeHeader('EULCS')" href="#/EULCS">#EULCS</a></li>
+						<li><a ng-click="changeHeader('LCK')" href="#/LCK">#LCK</a></li>
+						<li><a ng-click="changeHeader('LPL')" href="#/LPL">#LPL</a></li>
+						<li><a class="lms" ng-click="changeHeader('LMS')" href="#/LMS">#LMS</a></li>
 					</ul>
 				</div>
 
@@ -58,9 +101,13 @@
 	</div>
 </div>
 
+
+
+	<div class="container-fluid refresh-page text-center"><a ng-click="changeHeader('')" href="#/"><h3> Refresh feed for {{header}} ?</h3></a></div>
+
 <!--****[NG-VIEW - haven't added yet!!!]****-->
 
-	<div class="myTweets" ng-view></div>
+<div class="myTweets" ng-view></div>
 
 
 <!--****[Container that holds tweeter feed content]****-->

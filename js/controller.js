@@ -2,42 +2,67 @@ var tweetApp = angular.module('tweetApp', ['ngRoute', 'ngAnimate']);
 
 tweetApp.config(function($routeProvider){
 	////// Route Handlers //////
-	$routeProvider.when(
-		'/:page', 
-		{
+	$routeProvider.when('/:page',{
 			controller: 'mainController',
-			templateUrl: function($routeParams){
-				// console.log($routeParmas.page);
-				return 'page' + $routeParams.page + '.html';
-		}
-		
-	});
+			templateUrl: 'pagelolesports.html'
+		});
 
 	$routeProvider.otherwise({
-		redirectTo: '/nalcs',
+		redirectTo: '/NALCS',
 	});
 	//////End Route Handlers //////
 	
 });
 
-tweetApp.controller('mainController', function($scope, $http, $routeParams, $interval){
+tweetApp.controller('mainController', function($scope, $http, $routeParams, $interval, $location){
 
-	var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?hash=EULCS&secondHash=NALCS'
+	var leagueDivisons = '/NALCS';
+	if( 'page' in $routeParams){
+		leagueDivisons = $routeParams.page;
+		console.log(leagueDivisons);
+	}
+
+	$scope.header = "LoL Esports";
+	$scope.changeHeader = function(name){
+		$scope.header = name;
+	}
+
+
+	$scope.nextId = function(id){
+		console.log(id);
+		$location.path("#/" + id);
+	}                                    
+	// user=true&
+
+	var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=lolesports&secondHash=' + leagueDivisons;
 
 	$http.get(url).success(function(data){
 
 		$scope.data = data.statuses;
 		for(i = 0; i<$scope.data.length; i++){
-
 			if($scope.data[i].user.profile_banner_url === undefined){
 				$scope.data[i].user.profile_banner_url = 'img/placeholder.jpg';
-			}
+			} 
 			// console.log($scope.data[i].user.profile_banner_url);
-
 			var time = $scope.data[i].created_at;
 			var tweetTime = new Date(time);
 			$scope.data[i].tweetSeconds = tweetTime.getTime()/1000;
 		}
+			// function checkImageExists(urlToImage){
+			// 	$http({method: 'GET', url: urlToImage}).then(function successCallback(response) {
+			// 	    return urlToImage;
+			// 	}, function errorCallback(response) {
+			// 	    if(response.status == 404){
+			// 	    	//image does not exist. Use Placeholder.
+			// 	    	return 'img/placeholder2.jpg';
+			// 	    }
+			// 	});	
+			// }
+// ​			var bannerImage = checkImageExists($scope.data[i].user.profile_banner_url);
+
+
+
+
 
 		console.log(data);
 		// console.log(tweetTime);

@@ -41,8 +41,6 @@ body {
 
 #header {
 	height: 25vh;
-/*	background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
-	background-position: 1px -126px;*/
 	color: white;
 	width: 100%;
 	margin-bottom: 10px;
@@ -74,6 +72,16 @@ body {
 	border-bottom: 3px solid #ddd;
 }
 
+.bottom-nav-fans {
+	border-radius: 0 50px 0 0;
+	position: absolute;
+	left: 0px;
+	top: 183px;
+}
+
+.navbar-toggle{
+
+}
 
 .navbar-fixed-top {
     position: fixed;
@@ -107,8 +115,9 @@ body {
 }
 
 #user-name {
+	font-size: 16px;
 	position: relative;
-    top: 92px;
+    top: 80px;
     left: 15px;
 }
 
@@ -116,19 +125,28 @@ body {
 	/*border: 2px dotted black;*/
 	height: 300px;
 	position: relative;
-	left: 110px;
+	left: 80px;
 	/*top: -55px;*/
 }
 
 .at-username {
 	font-size: 14px;
 	position: relative;
-	top: -10px;
+	top: -5px;
+}
+
+
+.banner {
+	font-size: 70px;
+	position: absolute;
+	top: 70px;
+	left: -20px;
+	text-shadow: 0 0 0.1em #b3caf6, 0 0 0.1em #b3caf6;
 }
 
 @media screen and (max-width: 480px) {
     body {
-        background-color: lightgreen;
+        // background-color: lightgreen;
     }
 
 
@@ -175,6 +193,12 @@ body {
 	.panel {
 		margin-bottom: 20px;
 	}
+
+	.banner {
+		font-size: 50px;
+		top: 90px;
+		left: -25px;
+	}
 }
 
 
@@ -197,4 +221,49 @@ li:hover {
 
 .navbar-inverse .navbar-nav>li>a:hover {
     color: black;
+}
+
+.navbar-toggle {
+	right: -15px;
+	top: -8px;
+}
+
+.refresh-page {
+	background-color: #1f4ccd;
+	height: 5%;
+	border: 2px solid #1840af;
+	color: #b3caf6;
+	margin-top: -10;
+	h3 {
+		margin: 0;
+		padding: 5px;
+		
+	}
+	margin-top: -10px;
+   	margin-bottom: 10px;
+   	
+   	a:visited, a:active{
+   		color: white;
+   		text-decoration: none;
+   		// transition: 50s fadeout;
+   		// display: none;
+   	}
+   	a:link {
+		color: #b3caf6;
+   		text-decoration: none;	
+   	}
+   	a:hover {
+		color: black;
+		text-decoration: none;
+   	}
+}
+
+.fans {
+	position: relative;
+	top: 0px;
+	right: 183px;
+}
+
+li .lms:hover {
+	border-radius: 0 50px 0 0;
 }
