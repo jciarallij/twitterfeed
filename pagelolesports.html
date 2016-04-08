@@ -1,22 +1,20 @@
 <!--****[Container that holds tweeter feed content]****-->
-	
-		<div id="content-wrapper" class="container">
-			<div class="row">
-				<div id="feed-content" class=" col-lg-6 col-md-12 centered text-center panel panel-default" ng-repeat="tweet in data">
-<!--****[Content: Profile Picture, Banner, Username, Screen name]****-->
-					
-					<div class="username-profile"><img ng-src="{{tweet.user.profile_banner_url}}">
-						<div id="user-name" class="text-left">{{tweet.user.name}}<br><span class="at-username">@{{tweet.user.screen_name}}</span></div>
-					</div>
-					
-<!--****[Tweet Content: Text/Content of the tweet pulled from an api, also including the username and time they tweeted]****-->
 
-					<div class="profile-image"><img ng-src="{{tweet.user.profile_image_url}}"></div>
-					<div id="tweet-content" class="col-md-8 col-sm-8 col-xs-6 text-left">
-						<small>{{tweet.user.name}} | {{tweet.user.screen_name}}</small><br>{{tweet.text}}
-					</div>
-					<small class="text-right time-stamp">{{tweet.sinceTweeted}}</small>
-				</div>
+<div id="content-wrapper" class="container">
+	<div class="row">
+		<div id="feed-content" class=" col-lg-6 col-md-12 centered text-center panel panel-default" ng-repeat="tweet in data">
+			<!--****[Content: Profile Picture, Banner, Username, Screen name]****-->
+			
+			<div class="username-profile"><img check-image alt="Image" ng-src="{{tweet.user.profile_banner_url}}">
+				<div id="user-name" class="text-left">{{tweet.user.name}}<br><span class="at-username">@{{tweet.user.screen_name}}</span></div>
 			</div>
+			
+			<!--****[Tweet Content: Text/Content of the tweet pulled from an api, also including the username and time they tweeted]****-->
+			<div class="profile-image"><img ng-src="{{tweet.user.profile_image_url}}"></div>
+			<div id="tweet-content" class="col-md-8 col-sm-8 col-xs-6 text-left">
+				<small>{{tweet.user.name}} | {{tweet.user.screen_name}}</small><br>{{tweet.text}}
+			</div>
+			<small class="text-right time-stamp">{{tweet.sinceTweeted}}</small>
 		</div>
-
+	</div>
+</div>

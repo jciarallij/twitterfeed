@@ -1,269 +1,257 @@
-
 html {
-	line-height: 1.5;
+    line-height: 1.5;
     font-family: "Roboto",sans-serif;
     font-weight: normal;
-    color: rgba(0,0,0,0.87);
+    color: rgba(0, 0, 0, 0.87);
 }
 
-body { 
-  background-color: #eee; 
+body {
+    background-color: #eee;
 }
 
 .container-fluid {
-	padding-right: 0px;
-	padding-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 #content-wrapper {
-	height: 100%;
-
-}
-
-
-#feed-content {
-	height: 500px;
-	background-color: white;
-	font-size: 18px;
-	border-top: 0px;
-	padding: 0px;
+    height: 100%;
 }
 
 #feed-content {
-	img {
-		position: relative;
-		top: 0px;
-		width: 100%;
-		height: 150px;
-		border-radius: 4px 4px 0 0;
-	}
+    height: 500px;
+    background-color: white;
+    font-size: 18px;
+    border-top: 0px;
+    padding: 0px;
+}
+
+#feed-content {
+    img {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        height: 150px;
+        border-radius: 4px 4px 0 0;
+    }
 }
 
 #header {
-	height: 25vh;
-	color: white;
-	width: 100%;
-	margin-bottom: 10px;
+    height: 25vh;
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 #image-header {
     height: 25vh;
     background-position: 1px -126px;
-	width: 100%;
-	position: absolute;
+    width: 100%;
+    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
     border-bottom: 5px solid black;
-
-
 }
 
 .navbar-inverse {
-	background-color: #06156a;
-	width: 19.2%;
-
+    background-color: #06156a;
+    width: 19.2%;
 }
 
 .navbar {
-	float: right;
-	border-radius: 0 0 0 50px;
-	border-bottom: 3px solid #ddd;
+    float: right;
+    border-radius: 0 0 0 50px;
+    border-bottom: 3px solid #ddd;
 }
 
 .bottom-nav-fans {
-	border-radius: 0 50px 0 0;
-	position: absolute;
-	left: 0px;
-	top: 183px;
+    border-radius: 0 50px 0 0;
+    position: absolute;
+    left: 0px;
+    top: 183px;
 }
 
-.navbar-toggle{
-
-}
+.navbar-toggle {}
 
 .navbar-fixed-top {
     position: fixed;
     right: 0;
-	left: 81%;
+    left: 81%;
     z-index: 1030;
 }
 
-.time-stamp{
-	position: relative;
+.time-stamp {
+    position: relative;
     bottom: -270px;
     right: 10px;
-	float: right;
+    float: right;
 }
 
-
 #feed-content {
-	
-	.profile-image {
-		img {
-			position: relative;
-			top: -40px;
-			left: 15px;
-			width: 73px;
-			float: left;
-			height: 73px;
-			border: 2px solid #ccc;
-			border-radius: 4px;
-		}
-	}
+    .profile-image {
+        img {
+            position: relative;
+            top: -40px;
+            left: 15px;
+            width: 73px;
+            float: left;
+            height: 73px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+    }
 }
 
 #user-name {
-	font-size: 16px;
-	position: relative;
+    font-size: 16px;
+    position: relative;
     top: 80px;
     left: 15px;
 }
 
 #tweet-content {
-	/*border: 2px dotted black;*/
-	height: 300px;
-	position: relative;
-	left: 80px;
-	/*top: -55px;*/
+    height: 300px;
+    position: relative;
+    left: 80px;
 }
 
 .at-username {
-	font-size: 14px;
-	position: relative;
-	top: -5px;
+    font-size: 14px;
+    position: relative;
+    top: -5px;
 }
 
-
 .banner {
-	font-size: 70px;
-	position: absolute;
-	top: 70px;
-	left: -20px;
-	text-shadow: 0 0 0.1em #b3caf6, 0 0 0.1em #b3caf6;
+    font-size: 70px;
+    position: absolute;
+    top: 70px;
+    left: -20px;
+    text-shadow: 0 0 0.1em #b3caf6, 0 0 0.1em #b3caf6;
 }
 
 @media screen and (max-width: 480px) {
     body {
-        // background-color: lightgreen;
+     
+   
     }
 
+    #tweet-content {
+        padding-left: 0;
+    }
 
-	#tweet-content {
-		// font-size: 15px;
-		// position: relative;
-		// left: 0px;
-		// bottom: -30px;
-		padding-left: 0;
-	}
+    nav {
+        display: none;
+    }
 
-	nav {
-		display: none;
-	}
-	#feed-content {
-		.profile-image{
-				 img {
-					display: none;
-				}
-		}
-	}
-	#user-name {
-	position: relative;
-    top: 5px;
-    left: 5px;
-    font-size: 15px;
-    padding-bottom: 5px;
-	}
-	.at-username {
-	font-size: 12px;
-	position: relative;
-	top: -5px;
-	}
-	.time-stamp {
-		bottom: -270px;
-		font-size: 14px;
-	}
-	#feed-content
-		img {
-			top: -6px;
-    		left: -4px;
-   		 	width: 103%;
-		}
-	.panel {
-		margin-bottom: 20px;
-	}
+    #feed-content {
+        .profile-image {
+            img {
+                display: none;
+            }
+        }
+    }
 
-	.banner {
-		font-size: 50px;
-		top: 90px;
-		left: -25px;
-	}
+    #user-name {
+        position: relative;
+        top: 5px;
+        left: 5px;
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+
+    .at-username {
+        font-size: 12px;
+        position: relative;
+        top: -5px;
+    }
+
+    .time-stamp {
+        bottom: -270px;
+        font-size: 14px;
+    }
+
+    #feed-content
+    img {
+        top: -6px;
+        left: -4px;
+        width: 103%;
+    }
+
+    .panel {
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        font-size: 50px;
+        top: 90px;
+        left: -25px;
+    }
 }
 
-
-
-.my-nav{
-	position: relative;
-	right: -26px;
+.my-nav {
+    position: relative;
+    right: -26px;
 }
 
 .link1 {
-	background-color: #FFFFFF;
-	border-radius: 0 0 0 15px;
-	border: 1px solid #eee;
+    background-color: #FFFFFF;
+    border-radius: 0 0 0 15px;
+    border: 1px solid #eee;
 }
 
 li:hover {
-	background-color: #ddd;
-	height: 52px;
+    background-color: #ddd;
+    height: 52px;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover {
+.navbar-inverse .navbar-nav > li > a:hover {
     color: black;
 }
 
 .navbar-toggle {
-	right: -15px;
-	top: -8px;
+    right: -15px;
+    top: -8px;
 }
 
 .refresh-page {
-	background-color: #1f4ccd;
-	height: 5%;
-	border: 2px solid #1840af;
-	color: #b3caf6;
-	margin-top: -10;
-	h3 {
-		margin: 0;
-		padding: 5px;
-		
-	}
-	margin-top: -10px;
-   	margin-bottom: 10px;
-   	
-   	a:visited, a:active{
-   		color: white;
-   		text-decoration: none;
-   		// transition: 50s fadeout;
-   		// display: none;
-   	}
-   	a:link {
-		color: #b3caf6;
-   		text-decoration: none;	
-   	}
-   	a:hover {
-		color: black;
-		text-decoration: none;
-   	}
+    background-color: #1f4ccd;
+    height: 5%;
+    border: 2px solid #1840af;
+    color: #b3caf6;
+    margin-top: -10;
+
+    h3 {
+        margin: 0;
+        padding: 5px;
+    }
+
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+    a:visited, a:active {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:link {
+        color: #b3caf6;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 .fans {
-	position: relative;
-	top: 0px;
-	right: 183px;
+    position: relative;
+    top: 0px;
+    right: 183px;
 }
 
 li .lms:hover {
-	border-radius: 0 50px 0 0;
+    border-radius: 0 50px 0 0;
 }

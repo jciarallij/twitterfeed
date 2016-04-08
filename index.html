@@ -1,148 +1,89 @@
 <!DOCTYPE html>
 <html ng-app="tweetApp">
-
-
-<head>
-	<title>Twitter Feed</title>
-
-<!--****[ Bootstrap, jQuery, Angular(routes,animate,cookies), CSS/SaSS, and native Javascript]****-->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	  <link rel="stylesheet" type="text/css" href="css/style.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-	  <script type="text/javascript" src="js/angular-route.min.js"></script>
-	  <script type="text/javascript" src="js/angular-animate.min.js"></script>
-	  <script type="text/javascript" src="js/angular-cookies.min.js"></script>
-	  <script type="text/javascript" src="js/controller.js"></script>
-</head>
-
-<!--****[Main Controller]****-->
-<body ng-controller="mainController">
-<!--****[Full Wrapper of the webpage]****-->
-	<div id="full-wrapper" class="container-fluid">
-		<div id="header" class="container-fluid text-center">
-			<div id="image-header"><a href="http://www.lolesports.com/en_US/na-lcs/"></a></div>
-			
-
-
-
-			<div class="col-md-6 col-sm-8 col-xs-10 banner">
-				{{header}}
-			</div>			
-			
-		
-<!--****[Header]****-->
-<div class="container-fluid">
-<!--****[Navigation]****-->
-		<div class="navbar navbar-default" role=navigation>
-			<div class="navbar-header">
-
-
+	<head>
+		<title>Twitter Feed</title>
+		<!--****[ Bootstrap, jQuery, Angular(routes,animate,cookies), CSS/SaSS, and native Javascript]****-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/angular-animate.min.js"></script>
+		<script type="text/javascript" src="js/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+	</head>
+	<!--****[Main Controller]****-->
+	<body ng-controller="mainController">
+		<!--****[Full Wrapper of the webpage]****-->
+		<div id="full-wrapper" class="container-fluid">
+			<div id="header" class="container-fluid text-center">
+				<div id="image-header"><a href="http://www.lolesports.com/en_US/na-lcs/"></a></div>
 				
-	<!-- 			My Toggle Button for my Navigation Menu! -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-			
-	<!-- 				My Navigation bar -->
-				<div class="navbar-collapse collapse">
-					<span class="navbar-brand"> Live LoL Esport Tweets</span>
-					<ul class="nav navbar-nav">
-						<li><a ng-click="changeHeader('NALCS')" href="#/NALCS">NALCS</a></li>
-						<li><a ng-click="changeHeader('EULCS')" href="#/EULCS">EULCS</a></li>
-						<li><a ng-click="changeHeader('LCK')" href="#/LCK">LCK</a></li>
-						<li><a ng-click="changeHeader('LPL')" href="#/LPL">LPL</a></li>
-						<li><a ng-click="changeHeader('LMS')" href="#/LMS">LMS</a></li>
-					</ul>
+				<div class="col-md-6 col-sm-8 col-xs-10 banner">
+					{{header}}
 				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="container-fluid">
-<!--****[Navigation]****-->
-		<div class="bottom-nav-fans navbar navbar-default" role=navigation>
-			<div class="navbar-header">
-
-
 				
-	<!-- 			My Toggle Button for my Navigation Menu! -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-			
-	<!-- 				My Navigation bar -->
-				<div class="navbar-collapse collapse">
-					<span class="navbar-brand">Fan Tweets!</span>
-					<ul class="nav navbar-nav">
-						<li><a ng-click="changeHeader('NALCS')" href="#/NALCS">#NALCS</a></li>
-						<li><a ng-click="changeHeader('EULCS')" href="#/EULCS">#EULCS</a></li>
-						<li><a ng-click="changeHeader('LCK')" href="#/LCK">#LCK</a></li>
-						<li><a ng-click="changeHeader('LPL')" href="#/LPL">#LPL</a></li>
-						<li><a class="lms" ng-click="changeHeader('LMS')" href="#/LMS">#LMS</a></li>
-					</ul>
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-</div>
-
-
-
-	<div class="container-fluid refresh-page text-center"><a ng-click="changeHeader('')" href="#/"><h3> Refresh feed for {{header}} ?</h3></a></div>
-
-<!--****[NG-VIEW - haven't added yet!!!]****-->
-
-<div class="myTweets" ng-view></div>
-
-
-<!--****[Container that holds tweeter feed content]****-->
-	
-<!-- 		<div id="content-wrapper" class="container">
-			<div class="row">
-				<div id="feed-content" class=" col-lg-6 col-md-12 centered text-center panel panel-default" ng-repeat="tweet in data"> -->
-<!--****[Content: Profile Picture, Banner, Username, Screen name]****-->
-					
-<!-- 					<div class="username-profile"><img ng-src="{{tweet.user.profile_banner_url}}">
-						<div id="user-name" class="text-left">{{tweet.user.name}}<br><span class="at-username">@{{tweet.user.screen_name}}</span></div>
-					</div> -->
-					
-<!--****[Tweet Content: Text/Content of the tweet pulled from an api, also including the username and time they tweeted]****-->
-
-<!-- 					<div class="profile-image"><img ng-src="{{tweet.user.profile_image_url}}"></div>
-					<div id="tweet-content" class="col-md-8 col-sm-8 col-xs-6 text-left">
-						<small>{{tweet.user.name}} | {{tweet.user.screen_name}}</small><br>{{tweet.text}}
+				
+				<!--****[Header]****-->
+				<div class="container-fluid">
+					<!--****[Navigation]****-->
+					<div class="navbar navbar-default" role=navigation>
+						<div class="navbar-header">
+							
+							<!-- 			My Toggle Button for my Navigation Menu! -->
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							
+							<!-- 				My Navigation bar -->
+							<div class="navbar-collapse collapse">
+								<span class="navbar-brand"> Live LoL Esport Tweets</span>
+								<ul class="nav navbar-nav">
+									<li><a ng-click="changeHeader('NALCS')" href="#/NALCS">NALCS</a></li>
+									<li><a ng-click="changeHeader('EULCS')" href="#/EULCS">EULCS</a></li>
+									<li><a ng-click="changeHeader('LCK')" href="#/LCK">LCK</a></li>
+									<li><a ng-click="changeHeader('LPL')" href="#/LPL">LPL</a></li>
+									<li><a ng-click="changeHeader('LMS')" href="#/LMS">LMS</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					<small class="text-right time-stamp">{{tweet.sinceTweeted}}</small>
+				</div>
+				<div class="container-fluid">
+					<!--****[Navigation]****-->
+					<div class="bottom-nav-fans navbar navbar-default" role=navigation>
+						<div class="navbar-header">
+							
+							<!-- 			My Toggle Button for my Navigation Menu! -->
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							
+							<!-- 				My Navigation bar -->
+							<div class="navbar-collapse collapse">
+								<span class="navbar-brand">Fan Tweets!</span>
+								<ul class="nav navbar-nav">
+									<li><a ng-click="changeHeader('NALCS')" href="#/NALCS">#NALCS</a></li>
+									<li><a ng-click="changeHeader('EULCS')" href="#/EULCS">#EULCS</a></li>
+									<li><a ng-click="changeHeader('LCK')" href="#/LCK">#LCK</a></li>
+									<li><a ng-click="changeHeader('LPL')" href="#/LPL">#LPL</a></li>
+									<li><a class="lms" ng-click="changeHeader('LMS')" href="#/LMS">#LMS</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div> -->
-
-</div>
-
-<!--****[Tool to check screen size pixels when scaling]****-->
-
-<!-- 	<script type="text/javascript">
-		$(window).resize(function(){
-   			$('span').text(x += 1);
-		});
-
-
-
-	</script> -->
-</body>
-</html>
+			<div class="container-fluid refresh-page text-center">
+				<a ng-click="changeHeader('')" href="#/"><h3> Refresh feed for {{header}} ?</h3></a></div>
+				
+				<div class="myTweets" ng-view></div>
+			</div>
+		</body>
+	</html>
