@@ -49,7 +49,7 @@ tweetApp.controller('mainController', function($scope, $http, $routeParams, $int
         $location.path("#/" + id);
     }
 
-    var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=lolesports&secondHash=' + leagueDivisons;
+    var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=lolesports&secondHash=';
 
     $http.get(url).success(function(data) {
 

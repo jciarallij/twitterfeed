@@ -37,7 +37,7 @@ body {
   top: 0px;
   width: 100%;
   height: 150px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
 }
 
 /* line 39, ../compass/sass/style.scss */
@@ -53,44 +53,51 @@ body {
   height: 25vh;
   background-position: 1px -126px;
   width: 100%;
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
   background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid black;
 }
 
 /* line 58, ../compass/sass/style.scss */
-.navbar-inverse {
-  background-color: #06156a;
-  width: 19.2%;
-}
-
-/* line 63, ../compass/sass/style.scss */
 .navbar {
   float: right;
   border-radius: 0 0 0 50px;
   border-bottom: 3px solid #ddd;
 }
 
-/* line 69, ../compass/sass/style.scss */
+/* line 68, ../compass/sass/style.scss */
 .bottom-nav-fans {
   border-radius: 0 50px 0 0;
   position: absolute;
   left: 0px;
-  top: 183px;
+  bottom: -3px;
+  float: left;
+  margin-bottom: 0;
+  background-color: #040f47;
+  border: #030a30;
+}
+/* line 77, ../compass/sass/style.scss */
+.bottom-nav-fans .navbar-collapse {
+  padding-left: 0px;
+  height: 20px;
 }
 
-/* line 78, ../compass/sass/style.scss */
-.navbar-fixed-top {
-  position: fixed;
+/* line 83, ../compass/sass/style.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #1f4ccd;
+}
+
+/* line 87, ../compass/sass/style.scss */
+.top-live-feed {
+  position: relative;
   right: 0;
-  left: 81%;
-  z-index: 1030;
+  bottom: 0;
 }
 
-/* line 85, ../compass/sass/style.scss */
+/* line 93, ../compass/sass/style.scss */
 .time-stamp {
   position: relative;
   bottom: -270px;
@@ -98,7 +105,7 @@ body {
   float: right;
 }
 
-/* line 94, ../compass/sass/style.scss */
+/* line 102, ../compass/sass/style.scss */
 #feed-content .profile-image img {
   position: relative;
   top: -40px;
@@ -110,7 +117,7 @@ body {
   border-radius: 4px;
 }
 
-/* line 107, ../compass/sass/style.scss */
+/* line 115, ../compass/sass/style.scss */
 #user-name {
   font-size: 16px;
   position: relative;
@@ -118,46 +125,46 @@ body {
   left: 15px;
 }
 
-/* line 114, ../compass/sass/style.scss */
+/* line 122, ../compass/sass/style.scss */
 #tweet-content {
   height: 300px;
   position: relative;
   left: 80px;
 }
 
-/* line 120, ../compass/sass/style.scss */
+/* line 128, ../compass/sass/style.scss */
 .at-username {
   font-size: 14px;
   position: relative;
   top: -5px;
 }
 
-/* line 126, ../compass/sass/style.scss */
+/* line 134, ../compass/sass/style.scss */
 .banner {
-  font-size: 70px;
+  font-size: 60px;
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: -20px;
   text-shadow: 0 0 0.1em #b3caf6, 0 0 0.1em #b3caf6;
 }
 
 @media screen and (max-width: 480px) {
-  /* line 140, ../compass/sass/style.scss */
+  /* line 148, ../compass/sass/style.scss */
   #tweet-content {
     padding-left: 0;
   }
 
-  /* line 144, ../compass/sass/style.scss */
+  /* line 152, ../compass/sass/style.scss */
   nav {
     display: none;
   }
 
-  /* line 150, ../compass/sass/style.scss */
+  /* line 158, ../compass/sass/style.scss */
   #feed-content .profile-image img {
     display: none;
   }
 
-  /* line 156, ../compass/sass/style.scss */
+  /* line 164, ../compass/sass/style.scss */
   #user-name {
     position: relative;
     top: 5px;
@@ -166,20 +173,20 @@ body {
     padding-bottom: 5px;
   }
 
-  /* line 164, ../compass/sass/style.scss */
+  /* line 172, ../compass/sass/style.scss */
   .at-username {
     font-size: 12px;
     position: relative;
     top: -5px;
   }
 
-  /* line 170, ../compass/sass/style.scss */
+  /* line 178, ../compass/sass/style.scss */
   .time-stamp {
     bottom: -270px;
     font-size: 14px;
   }
 
-  /* line 175, ../compass/sass/style.scss */
+  /* line 183, ../compass/sass/style.scss */
   #feed-content
   img {
     top: -6px;
@@ -187,49 +194,63 @@ body {
     width: 103%;
   }
 
-  /* line 182, ../compass/sass/style.scss */
+  /* line 190, ../compass/sass/style.scss */
   .panel {
     margin-bottom: 20px;
   }
 
-  /* line 186, ../compass/sass/style.scss */
+  /* line 194, ../compass/sass/style.scss */
   .banner {
-    font-size: 50px;
-    top: 90px;
-    left: -25px;
+    font-size: 52px;
+    left: 35px;
   }
 }
-/* line 193, ../compass/sass/style.scss */
+/* line 200, ../compass/sass/style.scss */
 .my-nav {
   position: relative;
   right: -26px;
 }
 
-/* line 198, ../compass/sass/style.scss */
+/* line 205, ../compass/sass/style.scss */
 .link1 {
   background-color: #FFFFFF;
   border-radius: 0 0 0 15px;
   border: 1px solid #eee;
 }
 
-/* line 204, ../compass/sass/style.scss */
+/* line 211, ../compass/sass/style.scss */
 li:hover {
   background-color: #ddd;
-  height: 52px;
+  height: 51px;
+  color: #b3caf6;
 }
 
-/* line 209, ../compass/sass/style.scss */
+/* line 217, ../compass/sass/style.scss */
+.fan-bot li:hover {
+  background-color: #0b22a8;
+  height: 50px;
+  color: #b3caf6;
+}
+
+/* line 223, ../compass/sass/style.scss */
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: black;
+  color: #b3caf6;
 }
 
-/* line 213, ../compass/sass/style.scss */
+/* line 227, ../compass/sass/style.scss */
 .navbar-toggle {
   right: -15px;
   top: -8px;
 }
 
-/* line 218, ../compass/sass/style.scss */
+/* line 232, ../compass/sass/style.scss */
+.fan-tog {
+  right: 0px;
+  top: 10px;
+  padding: 6px;
+}
+
+/* line 238, ../compass/sass/style.scss */
 .refresh-page {
   background-color: #1f4ccd;
   height: 5%;
@@ -239,35 +260,29 @@ li:hover {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 225, ../compass/sass/style.scss */
+/* line 245, ../compass/sass/style.scss */
 .refresh-page h3 {
   margin: 0;
   padding: 5px;
 }
-/* line 233, ../compass/sass/style.scss */
+/* line 253, ../compass/sass/style.scss */
 .refresh-page a:visited, .refresh-page a:active {
   color: white;
   text-decoration: none;
 }
-/* line 238, ../compass/sass/style.scss */
+/* line 258, ../compass/sass/style.scss */
 .refresh-page a:link {
   color: #b3caf6;
   text-decoration: none;
 }
-/* line 243, ../compass/sass/style.scss */
+/* line 263, ../compass/sass/style.scss */
 .refresh-page a:hover {
   color: black;
   text-decoration: none;
 }
 
-/* line 249, ../compass/sass/style.scss */
-.fans {
-  position: relative;
-  top: 0px;
-  right: 183px;
-}
-
-/* line 255, ../compass/sass/style.scss */
-li .lms:hover {
-  border-radius: 0 50px 0 0;
+/* line 269, ../compass/sass/style.scss */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #b3caf6;
+  text-shadow: 0 0 0.2em #1840af, 0 0 0.2em #1840af;
 }

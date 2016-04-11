@@ -32,7 +32,7 @@ body {
         top: 0px;
         width: 100%;
         height: 150px;
-        border-radius: 4px 4px 0 0;
+        border-radius: 4px;
     }
 }
 
@@ -47,17 +47,12 @@ body {
     height: 25vh;
     background-position: 1px -126px;
     width: 100%;
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
     background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
-    border-bottom: 5px solid black;
-}
-
-.navbar-inverse {
-    background-color: #06156a;
-    width: 19.2%;
+    border-bottom: 3px solid black;
 }
 
 .navbar {
@@ -65,21 +60,34 @@ body {
     border-radius: 0 0 0 50px;
     border-bottom: 3px solid #ddd;
 }
+// If I want to change the span color...
+// .bottom-nav-fans .fan-tweet {
+// 	color: black;
+// }
 
 .bottom-nav-fans {
     border-radius: 0 50px 0 0;
     position: absolute;
     left: 0px;
-    top: 183px;
+    bottom: -3px;
+    float: left;
+    margin-bottom: 0;
+    background-color: #040f47;
+	border: #030a30;
+    .navbar-collapse{
+    	padding-left: 0px;
+    	height: 20px;
+    }
 }
 
-.navbar-toggle {}
+.navbar-default .navbar-nav>li>a {
+    color: #1f4ccd;
+}
 
-.navbar-fixed-top {
-    position: fixed;
+.top-live-feed {
+    position: relative;
     right: 0;
-    left: 81%;
-    z-index: 1030;
+	bottom: 0;
 }
 
 .time-stamp {
@@ -124,9 +132,9 @@ body {
 }
 
 .banner {
-    font-size: 70px;
+    font-size: 60px;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: -20px;
     text-shadow: 0 0 0.1em #b3caf6, 0 0 0.1em #b3caf6;
 }
@@ -184,9 +192,8 @@ body {
     }
 
     .banner {
-        font-size: 50px;
-        top: 90px;
-        left: -25px;
+        font-size: 52px;
+        left: 35px;
     }
 }
 
@@ -203,16 +210,29 @@ body {
 
 li:hover {
     background-color: #ddd;
-    height: 52px;
+    height: 51px;
+    color: #b3caf6;
+}
+
+.fan-bot li:hover {
+    background-color: #0b22a8;
+    height: 50px;
+    color: #b3caf6;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: black;
+    color: #b3caf6;
 }
 
 .navbar-toggle {
     right: -15px;
     top: -8px;
+}
+
+.fan-tog {
+    right: 0px;
+    top: 10px;
+    padding: 6px;
 }
 
 .refresh-page {
@@ -246,12 +266,7 @@ li:hover {
     }
 }
 
-.fans {
-    position: relative;
-    top: 0px;
-    right: 183px;
-}
-
-li .lms:hover {
-    border-radius: 0 50px 0 0;
+.navbar-default .navbar-nav>li>a:hover {
+    color: #b3caf6;
+    text-shadow: 0 0 0.2em #1840af, 0 0 0.2em #1840af;
 }
