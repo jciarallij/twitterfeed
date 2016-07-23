@@ -14,9 +14,9 @@ body {
     padding-left: 0px;
 }
 
-#content-wrapper {
-    height: 100%;
-}
+// #content-wrapper {
+//     height: 100%;
+// }
 
 #feed-content {
     height: 500px;
@@ -37,22 +37,23 @@ body {
 }
 
 #header {
-    height: 25vh;
+    min-height: 220px;
     color: white;
     width: 100%;
     margin-bottom: 10px;
 }
 
 #image-header {
-    height: 25vh;
+    min-height: 220px;
     background-position: 1px -126px;
-    width: 100%;
     position: relative;
     width: 100%;
     top: 0;
     left: 0;
-    background-image: url("http://nanaue.net/wp-content/uploads/2014/12/Gy0fXcu.jpg");
-    border-bottom: 3px solid black;
+    right: 0;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navbar {
@@ -139,6 +140,39 @@ body {
     text-shadow: 0 0 0.1em #b3caf6, 0 0 0.1em #b3caf6;
 }
 
+.navbar-default .navbar-nav>li>a:hover {
+    color: #b3caf6;
+    text-shadow: 0 0 0.2em #1840af, 0 0 0.2em #1840af;
+}
+
+li:hover {
+    background-color: #ddd;
+    height: 51px;
+    color: #b3caf6;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    a:hover {
+        background: none;
+    }
+    .navbar-brand {
+        display: none;
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+        background: transparent;
+    }
+    li:hover {
+        background-color: transparent;
+    }
+    .banner {
+        top: 5px;
+    }
+
+}
+
+
 @media screen and (max-width: 480px) {
     body {
      
@@ -147,10 +181,6 @@ body {
 
     #tweet-content {
         padding-left: 0;
-    }
-
-    nav {
-        display: none;
     }
 
     #feed-content {
@@ -193,7 +223,7 @@ body {
 
     .banner {
         font-size: 52px;
-        left: 35px;
+        left: 15px;
     }
 }
 
@@ -208,11 +238,6 @@ body {
     border: 1px solid #eee;
 }
 
-li:hover {
-    background-color: #ddd;
-    height: 51px;
-    color: #b3caf6;
-}
 
 .fan-bot li:hover {
     background-color: #0b22a8;
@@ -222,6 +247,7 @@ li:hover {
 
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #b3caf6;
+    background: none;
 }
 
 .navbar-toggle {
@@ -266,7 +292,3 @@ li:hover {
     }
 }
 
-.navbar-default .navbar-nav>li>a:hover {
-    color: #b3caf6;
-    text-shadow: 0 0 0.2em #1840af, 0 0 0.2em #1840af;
-}

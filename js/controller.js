@@ -32,26 +32,42 @@ tweetApp.config(function($routeProvider) {
 
 tweetApp.controller('mainController', function($scope, $http, $routeParams, $interval, $location) {
 
-    var leagueDivisons = '/NALCS';
-    if ('page' in $routeParams) {
-        leagueDivisons = $routeParams.page;
-        console.log(leagueDivisons);
-    }
 
+    // $scope.mainTwitterFeed = "LoL_ESWikis";
+    // $scope.defaultTweetAcc = "LoL_ESWLive";
+    // $scope.defaultRegion = "NALCS";
     $scope.header = "LoL Esports";
-    $scope.changeHeader = function(name) {
-        $scope.header = name;
-    }
+
+    // var leagueDivisons = '/NALCS';
+    // if ('page' in $routeParams) {
+    //     leagueDivisons = $routeParams.page;
+    //     console.log(leagueDivisons);
+    // }
+
+    
+    // $scope.changeHeader = function(name) {
+    //     $scope.header = name;
+    //     if(name == "EULCS"){
+    //         $scope.defaultTweetAcc = "LoL_ESWLive2";
+    //         $scope.defaultRegion = "EULCS";
+    //         $scope.updateFeed();
+    //     }
+    // };
 
 
-    $scope.nextId = function(id) {
-        console.log(id);
-        $location.path("#/" + id);
-    }
+    // $scope.nextId = function(id) {
+    //     console.log(id);
+    //     $location.path("#/" + id);
+    // };
 
-    var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=lolesports&secondHash=';
 
-    $http.get(url).success(function(data) {
+    var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=LoL_ESWLive&secondHash=NALCS';
+
+    // var url = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?user=true&hash='+$scope.defaultTweetAcc+'&secondHash='+$scope.defaultRegion;
+
+        
+
+        $http.get(url).success(function(data) {
 
         $scope.data = data.statuses;
         for (i = 0; i < $scope.data.length; i++) {
@@ -65,12 +81,6 @@ tweetApp.controller('mainController', function($scope, $http, $routeParams, $int
             var tweetTime = new Date(time);
             $scope.data[i].tweetSeconds = tweetTime.getTime() / 1000;
         }
-
-
-
-
-
-
         $interval(function() {
             for (i = 0; i < $scope.data.length; i++) {
                 var currentDate = new Date();
@@ -94,12 +104,10 @@ tweetApp.controller('mainController', function($scope, $http, $routeParams, $int
                     timeStamp = " seconds ";
                 }
                 $scope.data[i].sinceTweeted = Math.floor(currentTime - tweetTime) + timeStamp + "ago";
-            };
+            }
 
         }, 1000);
-
-
-
     });
+
 
 });
